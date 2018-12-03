@@ -12,7 +12,7 @@ namespace TestSatClient
         [Fact]
         public void TestAutentica()
         {
-            var certificate = new Certificate("km33jc24k", File.ReadAllBytes(GetPath("Certificates/efirma.pfx")));
+            var certificate = new Certificate("PASSWORD", File.ReadAllBytes(GetPath("PFX_FILE.pfx")));
             var client = new CfdiRecoveryClient(certificate);
             var response = client.Autentica();
 
